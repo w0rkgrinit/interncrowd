@@ -1,0 +1,291 @@
+ <html>
+<body onscroll="changeBgColor()">
+	
+
+
+
+<script>
+		function changeBgColor() {
+			var body = document.querySelector("body");
+			var yPos = window.pageYOffset;
+			if (yPos > 700) {
+				body.style.backgroundColor = "#FFE293";
+               
+                }else {
+				body.style.backgroundColor = "#DEB9D8";
+			}
+		}
+         window.addEventListener("load", changeBgColor); 
+	</script>
+<style>
+nav {
+font-size:16;
+}
+
+body {  
+
+       font-family: Arial, sans-serif;      
+       margin : 0 auto ;
+      transition: background-color 0.5s ease;
+      
+     }
+</style>
+
+<style>
+ 
+.contanor {
+ 
+  overflow-y: scroll;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: pink;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #DEB9D8;
+}
+ 
+
+a:link, a:visited {
+  background-color: #FF9319;
+  color:#008CB7;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.5s ease-in-out;
+   
+  border-radius: 2px;
+}
+
+a:hover, a:active {
+  background-color:#FFE293;
+  color:#FF9319;
+   
+}
+
+left {
+  float: left;
+  width: 30%;
+  padding: 20px;
+   
+  font-size:25px;
+  margin-top: 200px;
+  margin-left: 10px;
+ margin-right: 10px;
+}
+reft {
+  float: left;
+  width: 30%;
+  padding: 20px;
+   
+  font-size:25px;
+  margin-top: 12px;
+  margin-left: 10px;
+ margin-right: 10px;
+}
+.info-box {
+   
+   margin-left: 130px;
+   margin-top: 20px;
+  padding: 10px; 
+  border: dotted;  
+  border-radius: 5px;  
+  background-color:#B2EFFF; 
+  color:##DEB9D8;  
+  transition: background-color 0.7s ease-in-out;
+  cursor: pointer;  
+  text-align: center;  
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);  
+  width: 20%;
+}
+
+.info-box:hover {
+  background-color:#0065B2; 
+  color:#FF9319;
+}
+
+
+.container {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+ .top-bar {
+  position: fixed;
+  top: 0;
+  
+  width: 100%;
+  background-color: #FF9319;
+  margin-right: 20px;
+  
+  height: 70px; 
+}
+
+.top-bar a {
+   
+  text-decoration: none;
+  margin-right: 20px;
+   
+}
+
+.main-content {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+<div class="top-bar">
+
+ 
+<h2 style= "color:#008CB7 ; font-size:20px" ;> Intern Crowd 
+
+
+
+
+
+ 
+ <a href="#">HOME</a>
+  <a href="#">INTERNSHIPS</a>
+   <a href="#">CONTACT</a>
+  
+ <a href="#">ABOUT US</a>
+ 
+
+  <input type="text" name="search" placeholder="Search...">
+  <button type="submit">Search</button>
+<h2>
+
+</div>
+
+ <div class="main-content">
+
+ 
+<h1 style="color:#008CB7 ;font:arial;font-size: 60px;background-color: #FF9319;text-align:center";> Welcome to Intern Crowd </h1> 
+
+</div>
+
+
+
+ 
+
+
+
+
+
+<section>
+<left>
+<h1 style="color:#008CB7"; >I N T E R N S H I P S</h1>
+<h2 style="font-size:20;color:#1EABD6";>An internship is a temporary work experience typically provided by an organization or a company to students or recent graduates.</h2><p style="font-size:15 ; color:#004E66";> The purpose of an Internships provide a valuable opportunity for students or recent graduates to gain hands-on experience.</p>
+
+</left>
+</section>
+
+<img src="intern.png" width="900" margin-right="20px" height="800" alt = "reddit">
+
+
+
+
+
+<br><br><br>
+
+<h1 style="color:#008CB7 ;font-size: 60px;background-color: #FF9319;text-align:center";> Our Servieces </h1> 
+
+
+<div class="container">
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>Web Developement</h3>
+ 
+ <img src="web.jpg" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+
+  <p>Web development is the process of creating websites and web applications using a combination of programming languages, frameworks, and tools.</p>
+</div>
+ 
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>JAVA</h3>
+<img src="java.png" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+  <p>Java development involves using the Java programming language and related technologies to create software applications.</p>
+</div>
+
+
+ 
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>Android Developement</h3>
+<img src="android.png" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+  <p>Android development is the process of building mobile applications for devices running the Android operating system using programming </p>
+</div>
+
+ 
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>Digital Marketing</h3>
+<img src="digital.jpg" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+  <p>Digital marketing refers to the use of digital channels, such as search engines, social media, email, and websites, to promote and sell products</p>
+</div>
+ 
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>C/C++ Developement</h3>
+<img src="c.png" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+  <p>This is an information box that has been turned into a button.</p>
+</div>
+
+<div class="info-box" onclick="alert('You clicked the button!')">
+  <h3>Cloud Computing</h3>
+<img src="cloud.png" width="200" height="200" margin-right="20px"  alt = "reddit">
+
+  <p>This is an information box that has been turned into a button.</p>
+</div>
+
+ 
+
+<section>
+<reft>
+<h1 style="font-size:50px;color:#008CB7"; >About Us <h1>
+<p style="color:#008CB7;font-size:20px";>Intern Crowd Is An Online Coding Platform that Offers Specially Programming Courses For Students. You've Probably Heard About How Programming Shines With New Technology. We Have To Be Aware Of How Programming Can Initiate New Innovations. What's A Better Approach For Our Students Is To Grasp And Adapt To The Technology Around Them.<p>
+</left>
+</section>
+
+
+
+ <h1 style=" 60px;background-color: #FF9319; width:100%"; >  
+
+ 
+     <a href="#">Home</a></li> 
+     <a href="#">About</a></li> 
+      <a href="#">Contact</a></li>  
+      <a href="#">Blog</a></li> 
+      <a href="#">Interncrowd</a></li> 
+     <a href="#">Internship</a></li> 
+      <a href="#">Contact</a></li>
+        <a href="#">legal</a></li>
+          
+ </h1> 
+</div>
+
+
+<!-- note king was sick at this point -->
+</p>	
+</body>
+</html>
