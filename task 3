@@ -1,0 +1,216 @@
+
+<html>
+<head>
+  <title> t3</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<style>
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+#quiz-container {
+  hight:200px;
+  border-type:1;
+  width: 200 px;
+  margin-top: 50px;
+  display: none;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+.answer-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.answer-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+
+</style>
+  <h1>Simple Quiz</h1>
+  <div id="quiz-container">
+    <div id="question-container">
+      <p id="question"></p>
+    </div>
+    <div id="answer-buttons-container">
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+      <button class="answer-button"></button>
+    </div>
+    <button id="submit-button">Submit</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<script>
+const quizData = [
+   
+  {
+    question: 'What is full form of CSS?',
+    answers: [
+      'color style sheet',
+      'color style section',
+      'cascading style sheet',
+      'cascading style section'
+    ],
+    correctAnswer: 'cascading style sheet'
+  },
+
+
+
+{
+    question: 'What is the fullform of HTML',
+    answers: [
+      'Hyper text matrix language',
+      'Hyper type market learning',
+      'Higher text markup learning',
+      'Hyper text markup language'
+    ],
+    correctAnswer: 'Hyper text markup language'
+  },
+
+
+
+
+   {
+    question: 'What is the correct HTML tag for inserting a line break?',
+    answers: [
+      'br',
+      'lb',
+      'break',
+      'p'
+    ],
+    correctAnswer: 'br'
+  },
+
+{
+  question: 'What alters the layout of a web page?',
+    answers: [
+      'XML',
+      'XHTML',
+      'CSS',
+      'HTML'
+    ],
+    correctAnswer: 'HTML'
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    question: 'Choose the correct HTML tag for the largest heading',
+
+
+    answers: [
+      'h1',
+      'head',
+      '<h6',
+      'heading'
+    ],
+    correctAnswer: 'h1'
+  },
+];
+
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons-container');
+const submitButton = document.getElementById('submit-button');
+let currentQuestionIndex = 0;
+
+function startQuiz() {
+  document.getElementById('quiz-container').style.display = 'block';
+  showQuestion();
+}
+
+function showQuestion() {
+  const question = quizData[currentQuestionIndex];
+  questionElement.innerText = question.question;
+  answerButtonsElement.innerHTML = '';
+  question.answers.forEach(answer => {
+    const button = document.createElement('button');
+    button.innerText = answer;
+    button.classList.add('answer-button');
+    button.addEventListener('click', () => {
+      checkAnswer(answer);
+    });
+    answerButtonsElement.appendChild(button);
+  });
+}
+
+function checkAnswer(answer) {
+  const question = quizData[currentQuestionIndex];
+  if (answer === question.correctAnswer) {
+    alert('Correct!');
+  } else {
+    alert('Incorrect!');
+  }
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizData.length) {
+showQuestion();
+} else {
+endQuiz();
+}
+}
+
+function endQuiz() {
+alert('Quiz complete!');
+currentQuestionIndex = 0;
+document.getElementById('quiz-container').style.display = 'none';
+}
+
+submitButton.addEventListener('click', () => {
+if (currentQuestionIndex < quizData.length) {
+alert('Please select an answer.');
+} else {
+endQuiz();
+}
+});
+
+startQuiz();
+
+
+</script>
